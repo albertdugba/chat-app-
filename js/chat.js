@@ -14,20 +14,24 @@
 
 function toggleModal() {
   if ($("#toggleBtn").css("display") == "block") {
-    $("#container").fadeOut(function () {
+    $(".container").fadeOut(function () {
       $("#overlay").fadeIn(300, function () {
         $("#toggleBtn").fadeOut(300, function () {
           $(".container").fadeIn(300);
         });
         $("#container").removeClass("container default");
+        $("#chatWrapper").removeClass("ChatWrapper default");
         $("#container").addClass("container fullscreen");
+        $("#chatWrapper").addClass("ChatWrapper expand");
       });
     });
   } else {
-    $("#container").fadeOut(function () {
+    $(".container").fadeOut(function () {
       $("#overlay").fadeOut(300, function () {
         $("#container").removeClass("container fullscreen");
+        $("#chatWrapper").removeClass("ChatWrapper expand");
         $("#container").addClass("container default");
+        $("#chatWrapper").addClass("ChatWrapper default");
         $("#toggleBtn").fadeIn(300, function () {
           $(".container").fadeIn(300);
         });
@@ -38,7 +42,14 @@ function toggleModal() {
 
 function toggleButton() {
   //$(".container").css("visibility", "visible");
-  $(".container").slideToggle();
+  $("#chatWrapper").slideToggle(function () {
+    if ($("#container").css("display") == "block") {
+      $("#container").fadeOut(300);
+    } else {
+      $("#chatWrapper").addClass("ChatWrapper default");
+      $("#container").fadeIn(300);
+    }
+  });
 }
 
 function rdata(action) {
@@ -69,8 +80,6 @@ function rdata(action) {
         }
       }
     );
-
-    // document.getElementById("send").value = "";
   }
 }
 

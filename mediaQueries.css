@@ -1,0 +1,13 @@
+/* hide full screen icon on mobile devices */
+@media (max-width: 500px) {
+  .icon,
+  .button-down {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .button-down {
+    display: block;
+  }
+}

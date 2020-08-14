@@ -8,111 +8,98 @@ ob_start();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Live chat</title>
     <link rel="stylesheet" href="chat.css" />
     <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="mediaQueries.css" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/chat.js"></script>
   </head>
   <body>
-    <div id="header__container">
-      <div class="header">
-        <div class="header__content">
-          <h1>logo</h1>
-          <nav class="header__nav">
-            <ul class="header__nav--items">
-              <li class="header__nav--item">
-                <a class="header__nav--link" href="#"></a>Home
-              </li>
-              <li class="header__nav--item">
-                <a class="header__nav--link" href="#"></a>About
-              </li>
-              <li class="header__nav--item">
-                <a class="header__nav--link" href="#"></a>Services
-              </li>
-              <li class="header__nav--item">
-                <a class="header__nav--link" href="#"></a>Contact
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
+
 
     <div class="sidebar">
       <div class="sidebar__nav">
-        <div class="sidebar_items">
+        <div>
+          <img src="https://www.laronshalley.com/icons/alphalogo.png" class="alphalogo"/>
+        </div>
+        <div class="sidebar__items">
+          <ul>
           <li class="sidebar__item">
-            <a href="#">Orders</a>
-          </li>
-          <li class="sidebar__item">
-            <a href="#">Payments</a>
-          </li>
-          <li class="sidebar__item">
-            <a href="#">Account</a>
-          </li>
-          <li class="sidebar__item">
-            <a href="#">Settings</a>
-          </li>
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#">Orders</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#">Payments</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#">Account</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#">Settings</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main__content">
+        <h1>Larron shalley</h1>
+      </div>
+    </div>
+
+    <div id="chatWrapper" class="ChatWrapper default">
+      <div id="container" class="container default">
+        <div class="container__header">
+          <p class="header__text">larronshalley live support</p>
+          <img
+            src="img/full-screen-icon.png"
+            alt="Full Screen"
+            onclick="toggleModal()"
+            class="icon"
+          />
+          <span>💬</span>
+        </div>
+        <div class="chat__messages" id="chat__messages">
+          <div id="rdata" class="chat__message"></div>
+        </div>
+        <button
+          class="scrollCountDown"
+          id="scrollCountDown"
+          onclick="scrollCountDown('#scrollCountDown')"
+        ></button>
+        <p id="alert"></p>
+        <div class="chat__form">
+          <textarea
+            type="text"
+            onkeypress="enter(e)"
+            name="insertname"
+            id="name"
+            placeholder="Start typing a message..."
+            class="chat__input"
+          ></textarea>
+          <input
+            onclick="rdata('insertdata')"
+            name="insertdata"
+            value=""
+            class="chat_button"
+            id="send"
+            type="submit"
+          />
         </div>
       </div>
     </div>
-    <div class="content">
-      <p>Content</p>
-      <p>Content</p>
-      <p>Content</p>
-      <p>Content</p>
-      <p>Content</p>
-      <p>Content</p>
-      <p>Content</p>
-      <p>Content</p>
-    </div>
 
-    <div id="container" class="container default">
-      <div class="container__header">
-        <p class="header__text">larronshalley live support</p>
-        <img
-          src="img/full-screen-icon.png"
-          alt="Full Screen"
-          onclick="toggleModal()"
-          class="icon"
-        />
-        <span>💬</span>
+
+      <div class="button-down" id="toggleBtn" onclick="toggleButton()">
+        <div class="lvIcon textLive"><p>Live Chat</p></div>
+        <div class="lvIcon btnLive">div>
       </div>
-      <div class="chat__messages" id="chat__messages">
-        <div id="rdata" class="chat__message"></div>
-      </div>
-      <button
-        class="scrollCountDown"
-        id="scrollCountDown"
-        onclick="scrollCountDown('#scrollCountDown')"
-      ></button>
-      <p id="alert"></p>
-      <div class="chat__form">
-        <textarea
-          type="text"
-          onkeypress="enter(e)"
-          name="insertname"
-          id="name"
-          placeholder="Start typing a message..."
-          class="chat__input"
-        ></textarea>
-        <input
-          onclick="rdata('insertdata')"
-          name="insertdata"
-          value=""
-          class="chat_button"
-          id="send"
-          type="submit"
-        />
-      </div>
-    </div>
-    <div class="button-down" id="toggleBtn" onclick="toggleButton()">
-      <div class="lvIcon textLive"><p>Live Chat</p></div>
-      <div class="lvIcon btnLive"></div>
-    </div>
-    <div id="overlay"></div>
-    <script src="js/chat.js"></script>
-  </body>
+
+      <div id="overlay"></div>
+      <?php require_once 'includes/footer.php'?>
+
+</body>
+
 </html>
