@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="css/styles.css"
+      media="screen"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ruluko&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Alpha Sign In</title>
+  </head>
+  <body>
+    <p></p>
+
+    <div id="login">
+      <img
+        class="alphalogo"
+        src="http://www.laronshalley.com/icons/alphalogo.png"
+      />
+      <div class="textfieldDiv">
+        <input
+          type="text"
+          class="textfield"
+          placeholder="Enter Username"
+          id="username"
+        />
+      </div>
+      <div class="textfieldDiv">
+        <input
+          type="password"
+          class="textfield"
+          placeholder="Enter password"
+          id="password"
+        />
+      </div>
+
+      <button id="btn" class="loginUser">LOG IN</button>
+
+      <br />
+      <span class="span">Register</span>
+      <span class="span">Reset Password</span>
+    </div>
+
+    <script>
+      let btn = document.getElementById("btn");
+
+      btn.addEventListener("click", () => {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        if (username === "" || password === "") {
+          alert("Username or password required");
+        } else {
+          $.post(
+            "postindex.php",
+            { login: "login", username: username, password: password },
+            function (data, status) {
+              if (data == "welcome") {
+                window.location = "index.php";
+              } else {
+                alert(data);
+              }
+            }
+          );
+          username = "";
+          password = "";
+        }
+      });
+    </script>
+  </body>
+</html>

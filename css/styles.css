@@ -1,0 +1,70 @@
+body {
+  background-color: #db0e0e;
+  font-family: "Roboto", sans-serif;
+}
+
+#login {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+.alphalogo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0px;
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.textfieldDiv {
+  background-color: #ffffff;
+  padding: 00px;
+  border-radius: 5px;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+.textfieldDiv lable {
+  display: block;
+}
+
+.textfield {
+  width: 100%;
+  padding: 10px;
+  border: 0px solid #ffffff;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 3px;
+}
+
+.loginUser {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px;
+  border: 0px solid transparent;
+  background-color: #ffffff;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.span {
+  display: block;
+  margin: 0px;
+  padding: 5px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.span:hover {
+  font-weight: bold;
+}
