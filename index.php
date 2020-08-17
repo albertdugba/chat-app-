@@ -16,6 +16,8 @@
 </head>
 
 <body>
+
+
     <div class="sidebar">
         <div class="sidebar__nav">
             <div>
@@ -51,25 +53,28 @@
                                 <div>
                                     <p><?php echo $_SESSION['u_name'] ?></p>
                                 </div>
-                                <div class="profile_image">
-                                    <img data-img="img/index.jpg" />
-                                </div>
+                                <div class="profile_image"><img data-img="img/index.jpg" /></div>
                             </div>
                             <ul class="optionNav">
                                 <li><a href="#">Profile</a></li>
-                                <li><a href="includes/logout.php">Logout</a></li>
-                                <li></li>
-                                <li><a href="#">Setting</a></li>
-                                <li></li>
+                                <li><a href="includes/logout.php">Logout</a>
+                                <li>
+                                <li><a href="#">Setting</a>
+                                <li>
                             </ul>
                         </li>
                     </ul>
                 </div>
             </div>
             <div id="loadcontent">
-                <div class="content contEnt"></div>
-                <div class="content minidashBoard"></div>
+                <div class="content contEnt">
+
+                </div>
+                <div class="content minidashBoard">
+
+                </div>
             </div>
+
         </div>
     </div>
 
@@ -94,6 +99,7 @@
         </div>
     </div>
 
+
     <div class="button-down" id="toggleBtn" onclick="toggleButton()">
         <div class="lvIcon textLive">
             <p>Live Chat</p>
@@ -103,6 +109,7 @@
 
     <div id="overlay"></div>
     <?php require_once 'includes/footer.php'?>
+
 </body>
 
 </html>
