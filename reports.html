@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reports</title>
+    <link rel="stylesheet" href="reports.css" />
+  </head>
+  <body>
+    <div class="reports">
+      <header class="reports__header">
+        <div class="header__search">
+          <input type="text" placeholder="Search here..." />
+          <div class="header__download">
+            Download File
+            <select class="header_select">
+              <option value="pdf">Pdf</option>
+              <option value="excel">Excel</option>
+            </select>
+          </div>
+        </div>
+      </header>
+      <h4 class="recent__transactions">Recent Transactions</h4>
+      <div class="reports__cards">
+        <div class="reports__card">
+          <div class="flex__container">
+            <span class="name">Alpha</span>
+            <div class="img">
+              <img src="./img/index.jpg" alt="alpha" />
+            </div>
+          </div>
+          <div class="number">02******456</div>
+          <div class="amount"><span>GHc</span> 200.00</div>
+        </div>
+        <div class="reports__card">
+          <div class="flex__container">
+            <span class="name">Alpha</span>
+            <div class="img">
+              <img src="./img/index.jpg" alt="alpha" />
+            </div>
+          </div>
+          <div class="number">02******456</div>
+          <div class="amount"><span>GHc</span> 200.00</div>
+        </div>
+        <div class="reports__card">
+          <div class="flex__container">
+            <span class="name">Alpha</span>
+            <div class="img">
+              <img src="./img/index.jpg" alt="alpha" />
+            </div>
+          </div>
+          <div class="number">02******456</div>
+          <div class="amount"><span>GHc</span> 200.00</div>
+        </div>
+        <div class="reports__card">
+          <div class="flex__container">
+            <span class="name">Alpha</span>
+            <div class="img">
+              <img src="./img/index.jpg" alt="alpha" />
+            </div>
+          </div>
+          <div class="number">02******456</div>
+          <div class="amount"><span>GHc</span> 200.00</div>
+        </div>
+        <div class="reports__card">
+          <div class="flex__container">
+            <span class="name">Alpha</span>
+            <div class="img">
+              <img src="./img/index.jpg" alt="alpha" />
+            </div>
+          </div>
+          <div class="number">02******456</div>
+          <div class="amount"><span>GHc</span> 200.00</div>
+        </div>
+      </div>
+      <main>
+        <div class="reports__contents">
+          <div class="reports__content--one">
+            <div class="transaction__heading">
+              <span>Latest Transacctions</span>
+
+              <div class="transaction__icon">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="long-arrow-alt-right"
+                  class="arrow__right"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- table for transactions-->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Payment Mode</th>
+                  <th>Status</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Today</td>
+                  <td>Fuel Purchase</td>
+                  <td>Alpha</td>
+                  <td class="fail">Failed</td>
+                  <td>Ghc 500.00</td>
+                </tr>
+                <tr>
+                  <td>Today</td>
+                  <td>Fuel Purchase</td>
+                  <td>Alpha</td>
+                  <td class="success">Sucess</td>
+                  <td>Ghc 500.00</td>
+                </tr>
+                <tr>
+                  <td>Today</td>
+                  <td>Fuel Purchase</td>
+                  <td>Alpha</td>
+                  <td class="success">Sucess</td>
+                  <td>Ghc 500.00</td>
+                </tr>
+                <tr>
+                  <td>Today</td>
+                  <td>Fuel Purchase</td>
+                  <td>Alpha</td>
+                  <td class="success">Sucesss</td>
+                  <td>Ghc 500.00</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="link">
+              <a href="#" class="see__more--link">
+                <span>see more</span>
+                <span>
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="long-arrow-alt-right"
+                    class="arrow__right"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"
+                    ></path></svg
+                ></span>
+              </a>
+            </div>
+          </div>
+          <div class="reports__content--two">
+            <h1>Box Two</h1>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

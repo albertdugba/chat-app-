@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --dashboard--color: white;
+  --dashboard-background: red;
+  --box-shadow: 0 8px 13px rgba(0, 0, 0, 0.5);
+  --primary-text-color: red;
+  --text-color: var(--dashboard--color);
+  --border-radius: 8px;
+  --card-color: var(--dashboard--color);
+  --header--background: #f3e3e3;
+}
+
+.reports {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 1180px;
+  margin: 10px auto;
+  padding: 0.6rem;
+  border-radius: var(--border-radius);
+  background: #f7f2f2;
+  box-shadow: var(--box-shadow);
+}
+
+.reports__header {
+  padding: 0.25rem 0.3rem;
+  color: var(--text-color);
+  border-radius: calc(var(--border-radius) - 4px);
+  background: var(--header--background);
+  color: var(--primary-text-color);
+}
+
+/* header */
+
+.header__search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+}
+
+.header__search > input {
+  outline: none;
+  border: none;
+  border-radius: var(--border-radius);
+  width: 600px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.header__select {
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #2c3e50;
+  background-image: none;
+}
+
+/* cards */
+
+.reports__cards {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.flex__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img {
+  border: 2px solid red;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 1.1rem;
+  color: var(--primary-text-color);
+}
+
+.img img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.number {
+  color: #bdbbbb;
+}
+
+.amount {
+  color: var(--primary-text-color);
+  font: 1.125rem;
+}
+
+.amount span {
+  color: #cccccc;
+}
+
+.fail {
+  color: var(--primary-text-color);
+}
+
+.success {
+  color: #109e68;
+}
+
+.reports__card {
+  height: 90px;
+  width: 200px;
+  background-color: var(--card-color);
+  margin-right: 12px;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+.reports__contents {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  border-radius: var(--border-radius);
+  padding: 0.55rem;
+}
+
+.reports__content--one {
+  height: 340px;
+  width: 60%;
+  background: #fff;
+  padding: 0.55rem;
+  margin-right: 10px;
+  border-radius: var(--border-radius);
+}
+
+.reports__content--two {
+  height: 340px;
+  width: 40%;
+  padding: 0.55rem;
+  margin-left: 20px;
+  background: #fff;
+  border-radius: var(--border-radius);
+}
+
+.recent__transactions {
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+
+.transaction__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--primary-text-color);
+}
+
+.transaction__heading span {
+  font-size: 1.3rem;
+}
+
+.arrow__right {
+  width: 20px;
+}
+
+/* table */
+table {
+  margin-top: 10px;
+  padding: 12px;
+  width: 100%;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  border: none;
+  border-radius: 3px;
+}
+
+table tbody tr {
+  background-color: #fff;
+  transition: background 0.3s ease-out;
+}
+
+tr > th {
+  color: #9a9a9a;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+table tbody tr:hover {
+  background: red;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+}
+
+table tbody tr td:first-of-type {
+  /* border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px; */
+}
+
+table tbody tr td:last-of-type {
+  text-align: center;
+}
+
+/* see more link */
+.see__more--link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  text-decoration: none;
+  color: var(--primary-text-color);
+  text-align: center;
+  margin-top: 10px;
+}
