@@ -1,16 +1,10 @@
-// $("#name").autogrow();
-
-// let textArea = document.querySelector(".chat__form");
-// textArea.addEventListener("keydown", autosize);
-
-// function autosize() {
-//   let el = this;
-
-//   setTimeout(() => {
-//     el.style.cssText = "height:auto; padding:0";
-//     el.style.cssText = "height:" + el.scrollHeight + "px";
-//   }, 0);
-// }
+$(document).ready(function () {
+  $("img").each(function () {
+    $(this).fadeOut(200, function () {
+      $(this).attr("src", $(this).data("img")).fadeIn(1000);
+    });
+  });
+});
 
 function toggleModal() {
   if ($("#toggleBtn").css("display") == "block") {

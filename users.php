@@ -1,16 +1,16 @@
 <?php
-require_once("postindex.php");
+require_once "postindex.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Users</title>
 </head>
 <body>
     <?php
-        //echo users();
-    ?>
+//echo users();
+?>
 </body>
 </html>

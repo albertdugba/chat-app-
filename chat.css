@@ -134,9 +134,8 @@ body {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   margin: 0 auto;
-  bottom: 100px;
-  right: 20px;
   margin-top: 100px;
+  position: relative;
 }
 .live-chat {
   outline: none;
