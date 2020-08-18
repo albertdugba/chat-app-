@@ -7,65 +7,27 @@
     <link rel="stylesheet" href="reports.css" />
   </head>
   <body>
+    <nav role="navigation">
+      <div id="menu__toggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <li><a href="#">Account</a></li>
+          <li><a href="#">Payment</a></li>
+          <li><a href="#">Subscriptions</a></li>
+          <li><a href="#">Pro Member</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="reports">
-      <header class="reports__header">
-        <div class="header__search">
-          <input type="text" placeholder="Search here..." />
-          <div class="header__download">
-            Download File
-            <select class="header_select">
-              <option value="pdf">Pdf</option>
-              <option value="excel">Excel</option>
-            </select>
-          </div>
-        </div>
-      </header>
       <h4 class="recent__transactions">Recent Transactions</h4>
       <div class="reports__cards">
         <div class="reports__card">
           <div class="flex__container">
             <span class="name">Alpha</span>
-            <div class="img">
-              <img src="./img/index.jpg" alt="alpha" />
-            </div>
-          </div>
-          <div class="number">02******456</div>
-          <div class="amount"><span>GHc</span> 200.00</div>
-        </div>
-        <div class="reports__card">
-          <div class="flex__container">
-            <span class="name">Alpha</span>
-            <div class="img">
-              <img src="./img/index.jpg" alt="alpha" />
-            </div>
-          </div>
-          <div class="number">02******456</div>
-          <div class="amount"><span>GHc</span> 200.00</div>
-        </div>
-        <div class="reports__card">
-          <div class="flex__container">
-            <span class="name">Alpha</span>
-            <div class="img">
-              <img src="./img/index.jpg" alt="alpha" />
-            </div>
-          </div>
-          <div class="number">02******456</div>
-          <div class="amount"><span>GHc</span> 200.00</div>
-        </div>
-        <div class="reports__card">
-          <div class="flex__container">
-            <span class="name">Alpha</span>
-            <div class="img">
-              <img src="./img/index.jpg" alt="alpha" />
-            </div>
-          </div>
-          <div class="number">02******456</div>
-          <div class="amount"><span>GHc</span> 200.00</div>
-        </div>
-        <div class="reports__card">
-          <div class="flex__container">
-            <span class="name">Alpha</span>
-            <div class="img">
+            <div class="image__profile">
               <img src="./img/index.jpg" alt="alpha" />
             </div>
           </div>
@@ -73,11 +35,23 @@
           <div class="amount"><span>GHc</span> 200.00</div>
         </div>
       </div>
+
+      <header class="reports__header">
+        <div class="header__search">
+          <input type="text" placeholder="Search here..." />
+          <div class="header__download">
+            <select class="header__select" style="min-width: 90%;">
+              <option value="pdf">Pdf</option>
+              <option value="excel">Excel</option>
+            </select>
+          </div>
+        </div>
+      </header>
       <main>
         <div class="reports__contents">
           <div class="reports__content--one">
             <div class="transaction__heading">
-              <span>Latest Transacctions</span>
+              <span>Latest Transactions</span>
 
               <div class="transaction__icon">
                 <svg
@@ -98,49 +72,55 @@
               </div>
             </div>
 
-            <!-- table for transactions-->
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>Description</th>
-                  <th>Payment Mode</th>
-                  <th>Status</th>
-                  <th>Amount</th>
-                </tr>
-              </thead>
+            <!-- list of transactions-->
 
-              <tbody>
-                <tr>
-                  <td>Today</td>
-                  <td>Fuel Purchase</td>
-                  <td>Alpha</td>
-                  <td class="fail">Failed</td>
-                  <td>Ghc 500.00</td>
-                </tr>
-                <tr>
-                  <td>Today</td>
-                  <td>Fuel Purchase</td>
-                  <td>Alpha</td>
-                  <td class="success">Sucess</td>
-                  <td>Ghc 500.00</td>
-                </tr>
-                <tr>
-                  <td>Today</td>
-                  <td>Fuel Purchase</td>
-                  <td>Alpha</td>
-                  <td class="success">Sucess</td>
-                  <td>Ghc 500.00</td>
-                </tr>
-                <tr>
-                  <td>Today</td>
-                  <td>Fuel Purchase</td>
-                  <td>Alpha</td>
-                  <td class="success">Sucesss</td>
-                  <td>Ghc 500.00</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="transactions">
+              <div class="transaction__header">
+                <span>Date</span>
+                <span>Payment Mode</span>
+                <span>Status</span>
+                <span>Status</span>
+                <span>Amount</span>
+              </div>
+              <div class="transaction__wrapper">
+                <div class="transaction__list">
+                  <span>Today</span>
+                  <span>Alpha</span>
+                  <span>Success</span>
+                  <span>Status</span>
+                  <span>Ghc200.00</span>
+                </div>
+                <div class="transaction__list">
+                  <span>Today</span>
+                  <span>Alpha</span>
+                  <span>Success</span>
+                  <span>Status</span>
+                  <span>Ghc200.00</span>
+                </div>
+                <div class="transaction__list">
+                  <span>Today</span>
+                  <span>Alpha</span>
+                  <span>Success</span>
+                  <span>Status</span>
+                  <span>Ghc200.00</span>
+                </div>
+                <div class="transaction__list">
+                  <span>Today</span>
+                  <span>Alpha</span>
+                  <span>Success</span>
+                  <span>Status</span>
+                  <span>Ghc200.00</span>
+                </div>
+                <div class="transaction__list">
+                  <span>Today</span>
+                  <span>Alpha</span>
+                  <span>Success</span>
+                  <span>Status</span>
+                  <span>Ghc200.00</span>
+                </div>
+              </div>
+            </div>
+
             <div class="link">
               <a href="#" class="see__more--link">
                 <span>see more</span>
@@ -162,9 +142,6 @@
                 ></span>
               </a>
             </div>
-          </div>
-          <div class="reports__content--two">
-            <h1>Box Two</h1>
           </div>
         </div>
       </main>
