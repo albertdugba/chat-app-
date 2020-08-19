@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reports</title>
     <link rel="stylesheet" href="reports.css" />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
   <body>
-    <nav role="navigation">
+    <!-- <nav>
       <div id="menu__toggle">
         <input type="checkbox" />
         <span></span>
@@ -20,13 +26,17 @@
           <li><a href="#">Pro Member</a></li>
         </ul>
       </div>
-    </nav>
+    </nav> -->
     <div class="reports">
       <h4 class="recent__transactions">Recent Transactions</h4>
+
       <div class="reports__cards">
+        <select class="header__select">
+          <option value="pdf">Choose Subscription</option>
+        </select>
         <div class="reports__card">
           <div class="flex__container">
-            <span class="name">Alpha</span>
+            <span class="name">Report Commentary</span>
             <div class="image__profile">
               <img src="./img/index.jpg" alt="alpha" />
             </div>
@@ -38,113 +48,94 @@
 
       <header class="reports__header">
         <div class="header__search">
-          <input type="text" placeholder="Search here..." />
-          <div class="header__download">
-            <select class="header__select" style="min-width: 90%;">
-              <option value="pdf">Pdf</option>
-              <option value="excel">Excel</option>
-            </select>
+          <div class="date__picker">
+            <div>
+              <input type="text" placeholder="From" id="date__picker" />
+            </div>
+            <div>
+              <input type="text" placeholder="To" id="datepicker" />
+            </div>
+          </div>
+
+          <div class="header__action">
+            <div class="header__download">
+              <select class="header__select">
+                <option value="pdf">Pdf</option>
+                <option value="excel">Excel</option>
+              </select>
+            </div>
+            <div><button>Export</button></div>
           </div>
         </div>
       </header>
       <main>
         <div class="reports__contents">
           <div class="reports__content--one">
-            <div class="transaction__heading">
-              <span>Latest Transactions</span>
-
-              <div class="transaction__icon">
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fas"
-                  data-icon="long-arrow-alt-right"
-                  class="arrow__right"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-
             <!-- list of transactions-->
 
             <div class="transactions">
               <div class="transaction__header">
-                <span>Date</span>
-                <span>Payment Mode</span>
-                <span>Status</span>
-                <span>Status</span>
-                <span>Amount</span>
+                <span class="_date headerRow">Date</span>
+                <span class="_description headerRow">Description</span>
+                <div class="__payStatus_payAmount">
+                  <span class="_pM headerRow">Payment Mode</span>
+                  <span class="_pS headerRow">Status</span>
+                  <span class="_pA headerRow">Amount</span>
+                </div>
               </div>
               <div class="transaction__wrapper">
                 <div class="transaction__list">
-                  <span>Today</span>
-                  <span>Alpha</span>
-                  <span>Success</span>
-                  <span>Status</span>
-                  <span>Ghc200.00</span>
+                  <span class="_date headerRow"
+                    >Tuesday, 18 August 2020, 00:00:00</span
+                  >
+                  <span class="_description headerRow"
+                    >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Unde tempora doloremque cupiditate.</span
+                  >
+                  <div class="__payStatus_payAmount">
+                    <span class="_pM headerRow">Payment Mode</span>
+                    <span class="_pS headerRow success">Success</span>
+                    <span class="_pA headerRow">Ghc400.00</span>
+                  </div>
                 </div>
                 <div class="transaction__list">
-                  <span>Today</span>
-                  <span>Alpha</span>
-                  <span>Success</span>
-                  <span>Status</span>
-                  <span>Ghc200.00</span>
+                  <span class="_date headerRow"
+                    >Tuesday, 18 August 2020, 00:00:00</span
+                  >
+                  <span class="_description headerRow"
+                    >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Unde tempora doloremque cupiditate.</span
+                  >
+                  <div class="__payStatus_payAmount">
+                    <span class="_pM headerRow">Payment Mode</span>
+                    <span class="_pS headerRow success">Success</span>
+                    <span class="_pA headerRow">Ghc400.00</span>
+                  </div>
                 </div>
                 <div class="transaction__list">
-                  <span>Today</span>
-                  <span>Alpha</span>
-                  <span>Success</span>
-                  <span>Status</span>
-                  <span>Ghc200.00</span>
-                </div>
-                <div class="transaction__list">
-                  <span>Today</span>
-                  <span>Alpha</span>
-                  <span>Success</span>
-                  <span>Status</span>
-                  <span>Ghc200.00</span>
-                </div>
-                <div class="transaction__list">
-                  <span>Today</span>
-                  <span>Alpha</span>
-                  <span>Success</span>
-                  <span>Status</span>
-                  <span>Ghc200.00</span>
+                  <span class="_date headerRow"
+                    >Tuesday, 18 August 2020, 00:00:00</span
+                  >
+                  <span class="_description headerRow"
+                    >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Unde tempora doloremque cupiditate.</span
+                  >
+                  <div class="__payStatus_payAmount">
+                    <span class="_pM headerRow">Payment Mode</span>
+                    <span class="_pS headerRow success">Success</span>
+                    <span class="_pA headerRow">Ghc400.00</span>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="link">
-              <a href="#" class="see__more--link">
-                <span>see more</span>
-                <span>
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="long-arrow-alt-right"
-                    class="arrow__right"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"
-                    ></path></svg
-                ></span>
-              </a>
             </div>
           </div>
         </div>
       </main>
     </div>
+
+    <script>
+      $("#date__picker").datepicker();
+      $("#datepicker").datepicker();
+    </script>
   </body>
 </html>
