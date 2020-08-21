@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMS</title>
+    <link rel="stylesheet" href="sms.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="message">
+      <div class="message__header">
+        <span>Send SMS Campaign</span>
+      </div>
+      <div class="form">
+        <label for="sender" class="label">Sender ID</label>
+        <div class="form__control" id="new__sender">
+          <div class="select">
+            <select>
+              <option selected disabled>Choose a Sender ID</option>
+              <option value="1">Larron Shalley</option>
+              <option value="2">Alpha</option>
+              <option value="3">Shell Stations</option>
+            </select>
+          </div>
+          <div class="new__sender">
+            <a href="#" class="new__sender--link">New Sender ID</a>
+          </div>
+        </div>
+        <div class="form__control"></div>
+
+        <div class="form__control">
+          <label for="sender" class="label">Receipient's Number(s)</label>
+          <div class="form__inner">
+            <input type="text" id="" class="form__input" />
+          </div>
+        </div>
+        <div class="form__control">
+          <div class="custom__file">
+            <input type="checkbox" id="checkbox" />
+            <input
+              type="file"
+              class="custom__file--input"
+              id="file"
+              multiple
+              onchange="javascript:updateList()"
+            />
+            <label class="custom__file--label" for="file">
+              <i class="fas fa-cloud-upload-alt"></i>
+              Choose contacts from file</label
+            >
+          </div>
+          <ul id="file__list" class="file__list"></ul>
+        </div>
+        <div class="form__control">
+          <label for="sender" class="label">Message</label>
+          <textarea
+            class="message__box"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Messages content goes here..."
+          ></textarea>
+        </div>
+        <div class="message__schedule">
+          <input type="date" name="" id="" class="button__date" />
+          <input type="submit" value="Send" class="button__send" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

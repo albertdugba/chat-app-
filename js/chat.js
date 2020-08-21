@@ -6,6 +6,20 @@ $(document).ready(function () {
   });
 });
 
+let updateList = function () {
+  let input = document.getElementById("file");
+  let output = document.getElementById("file__list");
+  let children = "";
+  for (let i = 0; i < input.files.length; ++i) {
+    children +=
+      "<li>" +
+      input.files.item(i).name +
+      '<span class="remove__list" onclick="return this.parentNode.remove()">X</span>' +
+      "</li>";
+  }
+  output.innerHTML = children;
+};
+
 function toggleModal() {
   if ($("#toggleBtn").css("display") == "block") {
     $(".container").fadeOut(function () {
